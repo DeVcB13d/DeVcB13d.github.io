@@ -41,3 +41,22 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+const items = document.querySelectorAll('.experience__item');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+      entry.target.style.animationPlayState = 'running';
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+items.forEach((item, index) => {
+  item.style.setProperty('--delay', `${index * 0.15}s`);
+  observer.observe(item);
+});

@@ -646,3 +646,206 @@ body:not(.user-is-tabbing) a:focus {
     display: block;
   }
   
+.experience__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.experience__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-left: 3px solid #f50057; /* pink accent color similar to your buttons */
+  padding-left: 1rem;
+}
+
+.experience__logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-top: 0.3rem;
+}
+
+.experience__details h3 {
+  margin: 0 0 0.2rem 0;
+}
+
+.experience__details p {
+  margin: 0.1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.experience__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Larger vertical space between items */
+  margin-top: 2rem;
+}
+
+.experience__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  background: #23145b; /* Slight contrast background for each card */
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  padding: 2.2rem 2rem;
+  border-left: 5px solid #f50057;
+  transition: box-shadow 0.2s;
+}
+
+.experience__item:hover {
+  box-shadow: 0 12px 32px rgba(245,0,87,0.10);
+}
+
+.experience__logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.experience__details {
+  flex: 1;
+}
+
+.experience__details h3 {
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+  color: #f50057;
+}
+
+.experience__details p {
+  margin: 0.1rem 0;
+  font-size: 1.09rem;
+  color: #ffffffcc;
+  line-height: 1.6;
+}
+
+.experience__details p strong {
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.1em;
+}
+
+
+/* Container and Layout */
+.experience__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem 2.5rem;
+  margin-top: 2.5rem;
+}
+
+/* Card Style with hover animation */
+.experience__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background: linear-gradient(135deg, #1f1a59, #312d82);
+  border-radius: 20px;
+  padding: 2rem;
+  border-left: 6px solid #ffffff;
+  box-shadow: 0 8px 30px rgba(245, 0, 87, 0.15);
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.experience__item:hover {
+  transform: translateY(-8px) rotateX(3deg) rotateY(5deg);
+  box-shadow: 0 18px 50px rgba(245, 0, 87, 0.3);
+}
+
+/* Logo container with scale on hover */
+.experience__logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  object-fit: contain;
+  background: #fff;
+  transition: transform 0.35s ease;
+}
+
+.experience__item:hover .experience__logo {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Text content */
+.experience__details {
+  flex: 1;
+  color: #f4f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.experience__details h3 {
+  font-size: 3rem; /* Increased from 2.3rem */
+  margin-bottom: 0.7rem;
+}
+
+.experience__details p {
+  font-size: 5rem; /* Increased from 1.05rem */
+  line-height: 1.6;
+}
+
+.experience__details h3 {
+  font-size: 2.3rem;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 6px #ffffffaa;
+}
+
+.experience__details p {
+  margin: 0.35rem 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #dddde1cc;
+}
+
+.experience__details p strong {
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+/* Section heading */
+#experience h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #e1e1ff;
+  border-bottom: 5px solid #fffbfd;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+  text-shadow: 0 0 10px #ffffffcc;
+  font-weight: 800;
+}
+
+/* Add fade-in animation on scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience__item {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Custom delay on each item - add inline style: style="--delay: 0.2s" etc. */
