@@ -1,0 +1,113 @@
+My experience in total AI ML:
+
+
+
+1. Animal detection is a critical component of behavioural research in animal sciences.
+
+Improvement in detection accuracy along with model efficiency is essential for good results in animal phenotyping. Collecting data on a farm is easy, but labelling the data
+
+is tedious. Therefore, most current methods rely on limited training data, which is a
+
+restrictive factor for achieving optimal results. Recently, self-supervised learning methods leveraging unlabelled data have been shown to produce improved accuracy on extensive detection benchmarks. In this work, we proposed a self-supervised animal detection pipeline for animals in a constrained environment. The proposed pipeline employs a modified version of Barlow Twins in its pre-training stage. It is tested on a
+
+specially created dataset with labelled images along with unlabelled images for selfsupervised learning. With our proposed pipeline, we achieved a boost in mAP across
+
+various thresholds without compromising the efficiency of the detection models and
+
+having a high FPS video output even on non-industrial-grade GPUs, making it suitable for online tracking applications. The link to our code is publically available athttps://github.com/FayazRahman/barlow-effdet.
+
+
+
+2. Animal detection is a critical component of behavioural research in animal sciences. Improvement in detection accuracy along with model efficiency is essential for good results in animal phenotyping. Collecting data on a farm is easy, but labelling the data is tedious. Therefore, most current methods rely on limited training data, which is a restrictive factor for achieving optimal results. Recently, self-supervised learning methods leveraging unlabelled data have been shown to produce improved accuracy on extensive detection benchmarks. In this work, we proposed a self-supervised animal detection pipeline for animals in a constrained environment. The proposed pipeline employs a modified version of Barlow Twins in its pre-training stage. It is tested on a specially created dataset with labelled images along with unlabelled images for selfsupervised learning. With our proposed pipeline, we achieved a boost in mAP across various thresholds without compromising the efficiency of the detection models and having a high FPS video output even on non-industrial-grade GPUs, making it suitable for online tracking applications. The link to our code is publically available at https://github. com/FayazRahman/barlow-effdet.
+
+These were done as a part of my work at NTNU Norway.
+
+
+
+3. The growing proportion of elderly individuals worldwide has intensified the need for
+
+effective, non-intrusive systems that support independent living and ensure continuous
+
+monitoring of functional health. Difficulties in Activities of Daily Living (ADLs) are
+
+strong indicators of declining autonomy and predictors of institutional care,
+
+hospitalization, and overall health deterioration. Traditional monitoring approaches
+
+including caregiver observation, self reports, and wearable devices suffer from limitations
+
+such as reporting bias, user discomfort, and inconsistent compliance, making them
+
+unsuitable for long term and real world deployment.
+
+This report investigates a multimodal sensing framework for Human Activity
+
+Recognition (HAR) in eldercare environments, integrating radar sensing
+
+(AWR6843AOP), pressure sensitive flooring (Sensfloor), physiological monitoring
+
+(SOMNOtouch™ NIBP), and markerless motion capture (Captury). A structured
+
+laboratory setup was designed to emulate nursing home conditions, enabling
+
+standardized data acquisition across diverse ADL related activities.
+
+A comprehensive analysis of existing HAR datasets and sensing modalities highlights
+
+the tradeoffs between accuracy, privacy, and usability, motivating the development of a
+
+hybrid sensing approach. The collected data provides a foundation for evaluating sensor
+
+performance, understanding human movement patterns in realistic ADL settings, and
+
+exploring the potential for automated activity monitoring in eldercare
+
+
+
+4. Lejit AI: A legal tech application that helps lawyers, It was a startup, I worked as AIML lead there. The application currently has 200+ customers that are using the paid service, I did most of the AI backend which was: normal legal search - Integrated indian case laws, judgements into a pipeline for legal research, case citations and general queries. Build OCR engine that can detect text in  any indian language and convert it into a digital document. A legal document generator that provides legal documents in appropriate legal language. I have good knowledge of team management, python, nodejs, fastapi, langchain, rag, vector databases, optimizing the data etc.
+
+5. On Focus: I was an intern working part time, the main prroject was to build an IDP engine for customs document processing for Shipments, there were multiple printed bills containing many info that I need to be filled into a common form, did OCR on documents, passed extracted text to GPT, played with multiple tools like azure ocr, gemini etc to improve accuraccy and latenct via noise reduction, etc.
+
+
+
+Other Projects:
+
+
+
+1. Pseudo labelling: An extension of tracking for multiple animals, I built a pseudo labelling system to make use of large amount of video data available to create a robust pseuo labelled tracking where I can train and improve my tracking model using points from a pseudo label. This was also applied to the above dataset
+
+2. Multi view stereo and 3D Reconstruction he goal of MVS is to generate a complete, dense 3D model from calibrated images—a
+
+task critical to fields ranging from medical imaging, where precise modeling of
+
+anatomical structures aids diagnostics (e.g., lesions or orthopedic implants), to cultural
+
+heritage preservation, where digital archiving safeguards fragile artifacts. Despite rapid
+
+advancements in MVS algorithms, challenges persist. Variations in lighting, occlusions,
+
+
+
+and textureless regions complicate depth estimation, while the scarcity of standardized
+
+benchmarks hampers objective performance comparisons.
+
+This work addresses these challenges through a robust pipeline combining
+
+COLMAP-based SfM for sparse reconstruction, graph-cut optimization to refine depth
+
+maps, and MVS to fuse refined data into a dense point cloud. By integrating geometric
+
+priors and photometric consistency, our approach mitigates ambiguities inherent in
+
+single-view analysis, enabling accurate reconstructions even with unordered image
+
+collections. The implications are profound: from enabling virtual restoration of
+
+archaeological sites to enhancing robotic perception, this methodology advances the
+
+frontier of 3D vision, bridging the gap between the physical and digital realms
+
+
+
+3.  Websites: I have created and designed multiple websites: my portfolio: devcb13d.github.io, , https://app.netlify.com/projects/evyra-design-studio/overview, https://evyra-design-studio.netlify.app/, https://www.smartscrews.ae/, app.lejit.ai

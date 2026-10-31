@@ -1,432 +1,1010 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/Dlogo.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Dev Narayan CB | Machine learning researcher / Engineer
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Narayan C. B. — AI Engineer &amp; Computer Vision Researcher</title>
+    <meta name="description" content="Portfolio of Dev Narayan C. B. — AI Engineer & Computer Vision Researcher specializing in real-time agentic voice systems, self-supervised learning, and multimodal eldercare sensing.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="./images/Dlogo.png">
 </head>
-
 <body>
+    <!-- Interactive Neural Network Canvas Background -->
+    <canvas id="neural-canvas"></canvas>
 
-  <!-- ***** Header ***** -->
+    <!-- Top Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#hero" class="logo">
+                <span class="logo-bracket">&lt;</span>DEV<span class="logo-accent">.CV</span><span class="logo-bracket">/&gt;</span>
+            </a>
 
-  <header class="header" role="banner" id="top">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
 
-    <!-- <div class="social-media-tab">
-      <ul class="social-links">
-        <li>
-          <a href="https://twitter.com/" target="_blank" title="Twitter">
-            <img src="./images/twitter.svg" alt="Twitter" />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/DeVcB13d/" target="_blank" title="GitHub">
-            <img src="./images/github.svg" alt="GitHub" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/c-b-dev-narayan-79b332227/" target="_blank" title="LinkedIn">
-            <img src="./images/linkedin.svg" alt="LinkedIn" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/devcb1313/" target="_blank" title="Instagram">
-            <img src="./images/instagram.svg" alt="Instagram" />
-          </a>
-        </li>
-      </ul>
-    </div> -->
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+            <div class="nav-actions">
+                <button class="nav-terminal-btn open-terminal-trigger" title="Launch Interactive Terminal (Press ~)">
+                    <span>[>_] CLI</span>
+                    <span class="key-badge">~</span>
+                </button>
+                <a href="./resume/" target="_blank" rel="noopener" class="nav-btn">Resume / CV</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- =================================================================
+             HERO SECTION
+             ================================================================= -->
+        <section id="hero" class="hero">
+            <div class="hero-glow-1"></div>
+            <div class="hero-glow-2"></div>
+            
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Available for AI / CV Roles &bull; Open to High-Impact Systems</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="gradient-text">Dev Narayan C. B.</span>
+                </h1>
+
+                <div class="hero-cycler-wrapper">
+                    <span>&gt; </span>
+                    <span id="typewriter-text">AI &amp; Computer Vision Researcher</span>
+                    <span class="typewriter-cursor"></span>
+                </div>
+
+                <p class="hero-description">
+                    Designing and deploying production-grade AI systems &mdash; from real-time agentic voice &amp; vision pipelines to self-supervised learning and multimodal eldercare sensing. Scaled enterprise legal AI to <strong>200+ paying users</strong> and published peer-reviewed research at <strong>AIAI &amp; BMVC 2023</strong>.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        Explore Projects
+                    </a>
+                    <a href="#architecture" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        System Architecture
+                    </a>
+                    <button class="btn btn-outline open-terminal-trigger">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                        Interactive CLI
+                    </button>
+                </div>
+
+                <!-- Key Metrics Bar -->
+                <div class="hero-metrics">
+                    <div class="metric-pill">
+                        <span class="metric-pill-val">200<span>+</span></span>
+                        <span class="metric-pill-lbl">Paying Users Scaled<br>(Lejit AI Platform)</span>
+                    </div>
+                    <div class="metric-pill">
+                        <span class="metric-pill-val">2<span>x</span></span>
+                        <span class="metric-pill-lbl">Published Papers<br>(AIAI &amp; BMVC 2023)</span>
+                    </div>
+                    <div class="metric-pill">
+                        <span class="metric-pill-val">13</span>
+                        <span class="metric-pill-lbl">Sensor Modalities Fused<br>(NTNU Eldercare Lab)</span>
+                    </div>
+                    <div class="metric-pill">
+                        <span class="metric-pill-val">9.5<span>/10</span></span>
+                        <span class="metric-pill-lbl">Academic CGPA<br>(CUSAT AI &amp; Data Science)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             ABOUT SECTION
+             ================================================================= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Researcher &amp; Builder</span>
+                    <h2 class="section-title">Bridging Research &amp; Production Scale</h2>
+                    <p class="section-desc">Engineering resilient, low-latency intelligence that solves real-world operational challenges.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="glass-card about-bio-text">
+                        <h3 class="card-heading">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Background &amp; Philosophy
+                        </h3>
+                        <p>
+                            I am an AI &amp; Software Engineer and Computer Science researcher with a background spanning <strong>self-supervised computer vision</strong>, <strong>multimodal sensor fusion</strong>, and <strong>low-latency agentic voice systems</strong>.
+                        </p>
+                        <p>
+                            Having served as the <strong>first AI hire</strong> at Lejit AI, I spearheaded the core RAG architecture and multilingual OCR engine that scaled the company from concept to over <strong>200+ paid customers</strong>. At <strong>NTNU (Norway)</strong>, I investigated non-intrusive welfare monitoring for elderly individuals by harmonizing mmWave radar, pressure flooring, and physiological wearables.
+                        </p>
+                        <p>
+                            My approach unites mathematical rigor with clean distributed systems engineering &mdash; whether tuning Barlow Twins cross-correlation objectives, optimizing Milvus vector caches, or eliminating turn-taking lag in WebRTC voice pipelines.
+                        </p>
+
+                        <div class="highlight-box">
+                            <p><strong>Core Focus:</strong> Self-Supervised Learning (SSL), Real-Time Video/Audio Pipelines, mmWave FMCW Radar, Multi-Agent RAG Orchestration, and High-Throughput Microservices.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card edu-card">
+                        <h3 class="card-heading">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-indigo)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                            Academic Foundation
+                        </h3>
+
+                        <div class="edu-item">
+                            <h4>MSc Computer Science (AI &amp; Data Science)</h4>
+                            <span class="edu-univ">Cochin University of Science and Technology (CUSAT)</span>
+                            <span class="edu-time">2024 &ndash; 2026</span>
+                            <div><span class="edu-badge">Advanced Deep Learning &bull; Vision &bull; Distributed Systems</span></div>
+                        </div>
+
+                        <div class="edu-item">
+                            <h4>BSc Computer Science (AI &amp; Data Science)</h4>
+                            <span class="edu-univ">Cochin University of Science and Technology (CUSAT)</span>
+                            <span class="edu-time">2021 &ndash; 2024</span>
+                            <div><span class="edu-badge">CGPA: 9.5 / 10.0 &bull; First Class with Distinction</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             PROFESSIONAL EXPERIENCE SECTION (IN DETAIL)
+             ================================================================= -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Track Record</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-desc">Proven leadership in venture-backed AI startups and international university research laboratories.</p>
+                </div>
+
+                <div class="experience-timeline">
+                    <!-- NTNU -->
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-role-group">
+                                <h3>Project Engineer &mdash; Multimodal Eldercare &amp; AI Research</h3>
+                                <span class="exp-company">Norwegian University of Science and Technology (NTNU)</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-period">Aug 2025 &ndash; Jan 2026</span>
+                                <span class="exp-location">Gjøvik, Norway</span>
+                                <div><span class="exp-badge">Research Lab Appointment</span></div>
+                            </div>
+                        </div>
+
+                        <p class="exp-summary">
+                            Architected and deployed a multi-sensor welfare-monitoring research framework designed for non-intrusive Activities of Daily Living (ADL) tracking in elderly-care environments.
+                        </p>
+
+                        <ul class="exp-bullets">
+                            <li>
+                                <strong>Multimodal Sensor Fusion:</strong> Built a synchronized data acquisition system integrating <strong>TI AWR6843AOP mmWave FMCW radar</strong>, Sensfloor pressure-sensitive flooring, SOMNOtouch physiological wearable sensors, and Captury markerless motion capture across 13 distinct human activity classes.
+                            </li>
+                            <li>
+                                <strong>Rigorous Experiment Pipeline:</strong> Designed the experiment pipeline end-to-end: standardized dataset acquisition across three rooms in a nursing-home simulation lab, session-based train/test splits to eliminate temporal/spatial leakage, and per-class decision threshold tuning to mitigate extreme class imbalance.
+                            </li>
+                            <li>
+                                <strong>Real-Time SSL on Consumer GPUs:</strong> Extended a self-supervised detection architecture (Barlow Twins-based, from 2023 publications) into a real-time inference pipeline running on consumer-grade GPUs without losing detection mAP.
+                            </li>
+                            <li>
+                                <strong>Data Integrity &amp; Bug Diagnosis:</strong> Diagnosed and resolved severe data-integrity anomalies in raw sensor captures (split binary formats, packet loss under heavy USB bus load, session contamination) that were silently corrupting downstream training models.
+                            </li>
+                        </ul>
+
+                        <div class="tech-tag-row">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">TI AWR6843AOP mmWave FMCW</span>
+                            <span class="tech-tag">Sensfloor</span>
+                            <span class="tech-tag">SOMNOtouch NIBP</span>
+                            <span class="tech-tag">Captury Mocap</span>
+                            <span class="tech-tag">Barlow Twins SSL</span>
+                            <span class="tech-tag">Signal Processing</span>
+                            <span class="tech-tag">Barlow-EffDet</span>
+                        </div>
+                    </div>
+
+                    <!-- Lejit AI -->
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-role-group">
+                                <h3>AI / ML Lead &mdash; First AI Hire</h3>
+                                <span class="exp-company">Lejit AI</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-period">Nov 2024 &ndash; July 2025</span>
+                                <span class="exp-location">India &bull; Remote</span>
+                                <div><span class="exp-badge">Startup Founding Hire &bull; 200+ Paid Customers</span></div>
+                            </div>
+                        </div>
+
+                        <p class="exp-summary">
+                            First AI hire; led development of an agentic RAG platform for legal professionals from prototype to 200+ paying customers. Spearheaded machine learning architecture, document digitisation pipelines, and low-latency microservices.
+                        </p>
+
+                        <ul class="exp-bullets">
+                            <li>
+                                <strong>Agentic Legal RAG:</strong> Fine-tuned LLMs and built agentic RAG pipelines over Indian case-law databases and court judgments for case-reference, argument generation, and statutory citation validation.
+                            </li>
+                            <li>
+                                <strong>Multilingual Indic OCR Engine:</strong> Engineered a deep document-understanding engine capable of digitizing degraded physical legal petitions, court affidavits, and regional language documents across Indic scripts with automated statutory reference linking.
+                            </li>
+                            <li>
+                                <strong>High-Throughput Distributed Backend:</strong> Designed and deployed backend microservices using <strong>FastAPI</strong> and <strong>Node.js</strong> for real-time document indexing, SSE token streaming, and collaborative document markup.
+                            </li>
+                            <li>
+                                <strong>Vector Indexing &amp; Cost Optimization:</strong> Optimized <strong>Milvus</strong> vector clusters with semantic caching and chunk re-ranking, reducing LLM token consumption by over 60% and trimming median retrieval latency to sub-second speeds.
+                            </li>
+                        </ul>
+
+                        <div class="tech-tag-row">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Agentic RAG</span>
+                            <span class="tech-tag">Milvus Vector DB</span>
+                            <span class="tech-tag">Multilingual OCR</span>
+                            <span class="tech-tag">IBM WatsonX</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <!-- OnFocus Software -->
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-role-group">
+                                <h3>AI Engineer Intern &mdash; Intelligent Document Processing</h3>
+                                <span class="exp-company">OnFocus Soft Ltd.</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-period">Dec 2023 &ndash; Oct 2024</span>
+                                <span class="exp-location">India</span>
+                                <div><span class="exp-badge">IDP &amp; Extraction</span></div>
+                            </div>
+                        </div>
+
+                        <p class="exp-summary">
+                            Developed high-accuracy document intelligence pipelines automating customs shipping declarations and complex invoice processing.
+                        </p>
+
+                        <ul class="exp-bullets">
+                            <li>
+                                <strong>Customs IDP Pipeline:</strong> Built an Intelligent Document Processing engine extracting structured schema from diverse multilingual printed customs bills and commercial invoices.
+                            </li>
+                            <li>
+                                <strong>Multi-Engine OCR &amp; Noise Reduction:</strong> Integrated Azure OCR, Gemini, and GPT with automated pre-processing filters, minimizing character confusion errors and optimizing API throughput.
+                            </li>
+                            <li>
+                                <strong>Automated Profile Generator:</strong> Developed an automated CV synthesis engine structuring raw professional biographies into standardized, ATS-compliant formats.
+                            </li>
+                        </ul>
+
+                        <div class="tech-tag-row">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Azure OCR</span>
+                            <span class="tech-tag">GPT</span>
+                            <span class="tech-tag">Gemini</span>
+                            <span class="tech-tag">Information Extraction</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             INTERACTIVE SYSTEM ARCHITECTURE SHOWCASE
+             ================================================================= -->
+        <section id="architecture" class="architecture">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Interactive Blueprint</span>
+                    <h2 class="section-title">CareVoice AI &mdash; System Architecture</h2>
+                    <p class="section-desc">Click each pipeline node below to inspect real-time protocols, latency budgets, and engineering rationale.</p>
+                </div>
+
+                <div class="arch-showcase-box">
+                    <div class="arch-header">
+                        <div class="arch-title-group">
+                            <h3>Distributed WebRTC &amp; Voice Intelligence Pipeline</h3>
+                            <p>End-to-end voice latency kept under 650ms from user utterance to Tavus video playback.</p>
+                        </div>
+                        <a href="carevoice-ai.html" class="btn btn-outline">Full Case Study &rarr;</a>
+                    </div>
+
+                    <!-- Interactive Node Pipeline -->
+                    <div class="arch-flow-container">
+                        <div class="arch-node active" data-node="frontend">
+                            <span class="arch-node-badge">WebRTC</span>
+                            <div class="arch-node-icon">💻</div>
+                            <span class="arch-node-name">React Client</span>
+                            <span class="arch-node-tech">Vite + TS</span>
+                        </div>
+
+                        <div class="arch-node" data-node="tokenserver">
+                            <span class="arch-node-badge">HTTPS</span>
+                            <div class="arch-node-icon">🔐</div>
+                            <span class="arch-node-name">Token Server</span>
+                            <span class="arch-node-tech">aiohttp :8080</span>
+                        </div>
+
+                        <div class="arch-node" data-node="livekit">
+                            <span class="arch-node-badge">SFU</span>
+                            <div class="arch-node-icon">☁️</div>
+                            <span class="arch-node-name">LiveKit Cloud</span>
+                            <span class="arch-node-tech">WebRTC Mesh</span>
+                        </div>
+
+                        <div class="arch-node" data-node="worker">
+                            <span class="arch-node-badge">AI Brain</span>
+                            <div class="arch-node-icon">🤖</div>
+                            <span class="arch-node-name">Agent Worker</span>
+                            <span class="arch-node-tech">STT · LLM · TTS · Tavus</span>
+                        </div>
+
+                        <div class="arch-node" data-node="database">
+                            <span class="arch-node-badge">SQL</span>
+                            <div class="arch-node-icon">💾</div>
+                            <span class="arch-node-name">SQLite DB</span>
+                            <span class="arch-node-tech">voice_agent.db</span>
+                        </div>
+                    </div>
+
+                    <!-- Node Details Panel -->
+                    <div class="arch-detail-panel">
+                        <div class="arch-detail-text">
+                            <h4 id="arch-detail-title">React + Vite + TypeScript Client</h4>
+                            <p id="arch-detail-desc">
+                                Zero-latency audio-video streaming interface. Renders an interactive doctor calendar picker, live dual chat transcripts, audio waveform visualizers, and tool execution badges.
+                            </p>
+                        </div>
+                        <div class="arch-detail-stats">
+                            <div class="arch-stat-row">
+                                <span class="arch-stat-label">Tech Stack:</span>
+                                <span class="arch-stat-value" id="arch-detail-tech">React 18 · Vite · TypeScript</span>
+                            </div>
+                            <div class="arch-stat-row">
+                                <span class="arch-stat-label">Latency:</span>
+                                <span class="arch-stat-value" id="arch-detail-latency">&lt; 35ms render</span>
+                            </div>
+                            <div class="arch-stat-row">
+                                <span class="arch-stat-label">Protocol:</span>
+                                <span class="arch-stat-value" id="arch-detail-protocol">WebRTC / HTTPS</span>
+                            </div>
+                            <div class="arch-stat-row">
+                                <span class="arch-stat-label">Role:</span>
+                                <span class="arch-stat-value" id="arch-detail-role">Client UI &amp; Stream Negotiation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             FEATURED PROJECTS SECTION ("Like a blog with links, descriptions")
+             ================================================================= -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio Showcase</span>
+                    <h2 class="section-title">Featured Projects &amp; Case Studies</h2>
+                    <p class="section-desc">Selected systems spanning agentic voice assistants, spatial computer vision, and luxury web architecture.</p>
+                </div>
+
+                <!-- Filter Pills -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="voice">Voice &amp; Agentic AI</button>
+                    <button class="filter-btn" data-filter="vision">Computer Vision &amp; SSL</button>
+                    <button class="filter-btn" data-filter="multimodal">Multimodal Sensing</button>
+                    <button class="filter-btn" data-filter="web">Web &amp; Architecture</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: CareVoice AI -->
+                    <div class="project-card featured-card" data-category="voice">
+                        <div class="project-card-badge">Live on Vercel &bull; Full-Stack AI</div>
+                        <div class="project-card-media">
+                            <img src="./images/header.jpg" alt="CareVoice AI Interface">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Voice AI &bull; WebRTC &bull; Multi-Agent</span>
+                            <h3 class="project-card-title">CareVoice AI &mdash; Real-Time Voice Agent &amp; Video Avatar</h3>
+                            <p class="project-card-desc">
+                                Production-grade clinical intake agent uniting real-time speech-to-text (<strong>Deepgram Nova-2</strong>), multi-turn reasoning with function calling (<strong>GPT-4o</strong>), expressive neural voice streaming (<strong>Cartesia Sonic</strong>), and a photorealistic doctor avatar powered by <strong>Tavus</strong> over WebRTC via <strong>LiveKit Cloud</strong>.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">LiveKit WebRTC</span>
+                                <span class="tech-tag">Deepgram STT</span>
+                                <span class="tech-tag">Cartesia TTS</span>
+                                <span class="tech-tag">OpenAI GPT-4o</span>
+                                <span class="tech-tag">Tavus Avatar</span>
+                                <span class="tech-tag">React + Vite</span>
+                                <span class="tech-tag">aiohttp</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://vercel.com/devcb13ds-projects/carevoice-ai" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/DeVcB13d/carevoice-ai" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GitHub
+                                    </a>
+                                </div>
+                                <button class="deep-dive-btn open-case-study-btn" data-study="carevoice">
+                                    Deep Dive &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Crowd Analytics & Zone Flow Engine -->
+                    <div class="project-card" data-category="vision">
+                        <div class="project-card-badge">Open Source &bull; Video Demo</div>
+                        <div class="project-card-media">
+                            <img src="./images/detections4.png" alt="Crowd Analytics Demo">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Computer Vision &bull; Spatial Analytics</span>
+                            <h3 class="project-card-title">Crowd Analytics &amp; Zone Flow Engine</h3>
+                            <p class="project-card-desc">
+                                A high-performance, multi-threaded pipeline for real-time person detection, tracking, and zone-based behavioral analytics using <strong>YOLOv8</strong>, <strong>ByteTrack</strong>, and a custom spatial vector engine. Includes automated alerting and a modern <strong>Gradio web console</strong>.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">YOLOv8</span>
+                                <span class="tech-tag">ByteTrack</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Multi-Threading</span>
+                                <span class="tech-tag">Gradio</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://github.com/DeVcB13d/crowd_analytics" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GitHub
+                                    </a>
+                                    <a href="https://github.com/DeVcB13d/crowd_analytics/blob/main/outputs/final_annotated.mp4" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                        Video
+                                    </a>
+                                </div>
+                                <button class="deep-dive-btn open-case-study-btn" data-study="crowd">
+                                    Deep Dive &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: The El Design House -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-card-badge">Production &bull; Architecture</div>
+                        <div class="project-card-media">
+                            <img src="./images/goldengrid.png" alt="The El Design House">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Luxury Editorial &bull; Next.js</span>
+                            <h3 class="project-card-title">The El Design House</h3>
+                            <blockquote class="project-card-quote">
+                                &ldquo;We do not merely decorate square footage; we choreograph atmosphere, light, and architectural harmony to evoke emotional resonance.&rdquo;
+                            </blockquote>
+                            <p class="project-card-desc">
+                                Bespoke interior design &amp; architectural studio digital experience for luxury hospitality operators, commercial enterprises, and discerning homeowners worldwide.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Editorial Design</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://the-el-design-house.vercel.app/" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                        Live Site
+                                    </a>
+                                </div>
+                                <button class="deep-dive-btn open-case-study-btn" data-study="eldesign">
+                                    Story &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Lejit AI Legal RAG -->
+                    <div class="project-card" data-category="voice">
+                        <div class="project-card-badge">200+ Paid Clients</div>
+                        <div class="project-card-media">
+                            <img src="./images/legalgpt.png" alt="Lejit AI Legal Copilot">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Legal Tech &bull; Agentic RAG</span>
+                            <h3 class="project-card-title">Lejit AI &mdash; Legal Copilot &amp; Indic OCR</h3>
+                            <p class="project-card-desc">
+                                Enterprise legal research engine indexing Indian Supreme Court and High Court case law. Powered by custom multilingual OCR, Milvus vector search, and automated citation linking.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">Agentic RAG</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Milvus</span>
+                                <span class="tech-tag">Indic OCR</span>
+                                <span class="tech-tag">LangChain</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://app.lejit.ai" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                        App
+                                    </a>
+                                </div>
+                                <button class="deep-dive-btn open-case-study-btn" data-study="lejit">
+                                    Deep Dive &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Animal Tracking with SSL -->
+                    <div class="project-card" data-category="vision">
+                        <div class="project-card-badge">AIAI &amp; BMVC 2023 Paper</div>
+                        <div class="project-card-media">
+                            <img src="./images/MOT1.gif" alt="Self-Supervised Animal Tracking">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Self-Supervised Learning &bull; PyTorch</span>
+                            <h3 class="project-card-title">Tracking-by-Self Detection (Barlow-EffDet)</h3>
+                            <p class="project-card-desc">
+                                A self-supervised multiple object tracking framework utilizing a modified <strong>Barlow Twins</strong> pre-training strategy and <strong>EfficientDet</strong> detector. Delivers high MOTA and real-time FPS on consumer GPUs.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">Barlow Twins SSL</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">EfficientDet</span>
+                                <span class="tech-tag">DeepSORT</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://github.com/FayazRahman/barlow-effdet" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GitHub
+                                    </a>
+                                </div>
+                                <button class="deep-dive-btn open-case-study-btn" data-study="animal">
+                                    Deep Dive &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Multimodal Eldercare HAR (NTNU) -->
+                    <div class="project-card" data-category="multimodal">
+                        <div class="project-card-badge">NTNU Norway &bull; mmWave</div>
+                        <div class="project-card-media">
+                            <img src="./images/NTNU-logo.png" alt="NTNU Eldercare Lab" style="object-fit: contain; padding: 2rem; background: #0c101a;">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Multimodal Sensing &bull; Signal Processing</span>
+                            <h3 class="project-card-title">Multimodal Welfare-Monitoring System</h3>
+                            <p class="project-card-desc">
+                                Non-intrusive activity recognition fusing <strong>TI AWR6843AOP mmWave radar</strong> point clouds, Sensfloor pressure matting, and SOMNOtouch physiology across 13 ADL classes in a simulated nursing facility.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">mmWave FMCW Radar</span>
+                                <span class="tech-tag">Sensfloor</span>
+                                <span class="tech-tag">SOMNOtouch</span>
+                                <span class="tech-tag">Signal Processing</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://github.com/DeVcB13d" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        NTNU GitHub
+                                    </a>
+                                </div>
+                                <a href="#experience" class="deep-dive-btn">
+                                    View Details &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: 3D Reconstruction & MVS -->
+                    <div class="project-card" data-category="vision">
+                        <div class="project-card-badge">COLMAP &bull; 3D Vision</div>
+                        <div class="project-card-media">
+                            <img src="./images/bullseye.png" alt="3D Reconstruction" style="object-fit: contain; padding: 2rem; background: #0b0f19;">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">3D Reconstruction &bull; Point Clouds</span>
+                            <h3 class="project-card-title">Multi-View Stereo &amp; Dense 3D Point Cloud</h3>
+                            <p class="project-card-desc">
+                                A robust 3D reconstruction pipeline integrating <strong>COLMAP Structure-from-Motion (SfM)</strong>, graph-cut depth map optimization, and multi-view stereo to fuse unordered photo collections into dense metric point clouds.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">COLMAP SfM</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Graph Cuts</span>
+                                <span class="tech-tag">OpenCV 3D</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://github.com/DeVcB13d" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GitHub
+                                    </a>
+                                </div>
+                                <a href="https://github.com/DeVcB13d" target="_blank" class="deep-dive-btn">
+                                    Repo &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Eye Cursor App -->
+                    <div class="project-card" data-category="vision">
+                        <div class="project-card-badge">Webcam Gaze Tracking</div>
+                        <div class="project-card-media">
+                            <img src="./images/site.gif" alt="Eye Cursor Controller">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Human-Computer Interaction</span>
+                            <h3 class="project-card-title">Eye Cursor &mdash; Vision-Driven Navigation</h3>
+                            <p class="project-card-desc">
+                                Hands-free OS pointer control using real-time iris landmark tracking with <strong>MediaPipe</strong> and <strong>PyAutoGUI</strong>. Calibrated for standard consumer webcams without dedicated hardware.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">MediaPipe</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">PyAutoGUI</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://github.com/DeVcB13d/Eye-cursor-app" target="_blank" rel="noopener" class="project-icon-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GitHub
+                                    </a>
+                                </div>
+                                <a href="https://github.com/DeVcB13d/Eye-cursor-app" target="_blank" class="deep-dive-btn">
+                                    Source &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9: Fullstack Production Web Client Work -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-card-badge">Production Web</div>
+                        <div class="project-card-media">
+                            <img src="./images/Ebuyfront.jpg" alt="Production Web Experiences">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-card-category">Modern Web Platforms</span>
+                            <h3 class="project-card-title">Commercial &amp; Design Web Platforms</h3>
+                            <p class="project-card-desc">
+                                Engineered production websites including <strong>Evyra Design Studio</strong>, <strong>Smart Screws AE</strong> industrial supplier platform, and <strong>Ebuy Flea Market</strong> with Next.js and MongoDB.
+                            </p>
+                            <div class="project-card-tags">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Netlify</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-action-links">
+                                    <a href="https://evyra-design-studio.netlify.app/" target="_blank" rel="noopener" class="project-icon-link">
+                                        Evyra Studio
+                                    </a>
+                                    <a href="https://www.smartscrews.ae/" target="_blank" rel="noopener" class="project-icon-link">
+                                        SmartScrews
+                                    </a>
+                                </div>
+                                <a href="ebuy.html" class="deep-dive-btn">
+                                    Ebuy &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             PUBLICATIONS SECTION
+             ================================================================= -->
+        <section id="publications" class="publications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Scientific Research</span>
+                    <h2 class="section-title">Peer-Reviewed Publications</h2>
+                    <p class="section-desc">Contributions to international machine learning conferences in self-supervised computer vision.</p>
+                </div>
+
+                <div class="pub-list">
+                    <!-- Publication 1 -->
+                    <div class="pub-item">
+                        <div class="pub-badge-row">
+                            <span class="pub-badge">AIAI 2023 &bull; Springer</span>
+                            <span class="pub-venue">IFIP Advances in Information and Communication Technology, vol 675</span>
+                        </div>
+                        <h3 class="pub-title">Tracking-by-Self Detection: A Self-supervised Framework for Multiple Animal Tracking</h3>
+                        <p class="pub-authors">
+                            Fayaz Rahman, <strong>C. B. Dev Narayan</strong>, et al. &bull; Springer Nature Switzerland
+                        </p>
+                        <p class="project-card-desc">
+                            Introduced a self-supervised tracking framework employing a customized Barlow Twins representation objective and EfficientDet backbone. Achieved robust Multiple Object Tracking Accuracy (MOTA) on farm video with non-industrial GPUs.
+                        </p>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1007/978-3-031-34111-3_47" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.45rem 1rem;">
+                                DOI: 10.1007/978-3-031-34111-3_47 &rarr;
+                            </a>
+                            <button class="bibtex-btn">
+                                Copy BibTeX Citation
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Publication 2 -->
+                    <div class="pub-item">
+                        <div class="pub-badge-row">
+                            <span class="pub-badge">BMVC 2023 Workshop</span>
+                            <span class="pub-venue">1st Workshop in Video Understanding and its Applications (VUA) @ BMVC</span>
+                        </div>
+                        <h3 class="pub-title">Self-supervised Animal Detection in Constrained Environment</h3>
+                        <p class="pub-authors">
+                            Fayaz Rahman, <strong>C. B. Dev Narayan</strong>, et al. &bull; British Machine Vision Conference
+                        </p>
+                        <p class="project-card-desc">
+                            Demonstrated that self-supervised pre-training on unlabelled farm footage substantially outperforms standard supervised transfer baselines across varied lighting and occlusion thresholds.
+                        </p>
+                        <div class="pub-actions">
+                            <a href="https://bmvc2023.org/workshops/The1stWorkshopinVideoUnderstandinganditsApplications/1/CameraReady/BMVC2023_Workshop.pdf" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.45rem 1rem;">
+                                Read Camera-Ready PDF &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             TECHNICAL SKILLS SECTION
+             ================================================================= -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">Technical Expertise &amp; Tooling</h2>
+                    <p class="section-desc">Technologies and frameworks applied across research investigations and production platforms.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <span class="skill-card-icon">🧠</span>
+                            <h3>AI &amp; Deep Learning</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Self-Supervised Learning</span>
+                            <span class="tech-tag">Barlow Twins</span>
+                            <span class="tech-tag">Agentic RAG</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">OpenAI GPT-4o</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Milvus Vector DB</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <span class="skill-card-icon">👁️</span>
+                            <h3>Vision &amp; Sensor Fusion</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">ByteTrack</span>
+                            <span class="tech-tag">EfficientDet</span>
+                            <span class="tech-tag">MediaPipe Gaze</span>
+                            <span class="tech-tag">mmWave Radar (AWR6843)</span>
+                            <span class="tech-tag">Sensfloor Matting</span>
+                            <span class="tech-tag">COLMAP 3D SfM</span>
+                            <span class="tech-tag">Multimodal HAR</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <span class="skill-card-icon">🎙️</span>
+                            <h3>Voice AI &amp; Streaming</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="tech-tag">LiveKit WebRTC</span>
+                            <span class="tech-tag">LiveKit Agents 1.x</span>
+                            <span class="tech-tag">Deepgram Nova-2</span>
+                            <span class="tech-tag">Cartesia Sonic TTS</span>
+                            <span class="tech-tag">Tavus Video Avatar</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">Audio Waveforms</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <span class="skill-card-icon">⚙️</span>
+                            <h3>Backend &amp; Languages</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="tech-tag">Python (Async/aiohttp)</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript / JS</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">React / Next.js</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">SQLite / MongoDB</span>
+                            <span class="tech-tag">Git / CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             CONTACT SECTION
+             ================================================================= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <span class="section-tag" style="margin-bottom: 1.25rem;">Initiate Collaboration</span>
+                    <h2 class="contact-title">Let&rsquo;s Build Something Extraordinary</h2>
+                    <p class="contact-subtitle">
+                        Whether you are assembling a frontier AI team, engineering real-time agentic voice or vision systems, or seeking consulting on research pipelines &mdash; my inbox is open.
+                    </p>
+
+                    <div class="contact-email-bar">
+                        <span class="email-address">devcb1313@gmail.com</span>
+                        <button class="copy-email-btn" title="Copy email address">Copy Email</button>
+                    </div>
+
+                    <div class="hero-cta-group" style="margin-bottom: 2rem;">
+                        <a href="mailto:devcb1313@gmail.com" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            Send Direct Email
+                        </a>
+                        <a href="./resume/" target="_blank" rel="noopener" class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            View Formal CV
+                        </a>
+                    </div>
+
+                    <div class="social-links-row">
+                        <a href="https://github.com/DeVcB13d" target="_blank" rel="noopener" class="social-link-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/c-b-dev-narayan-79b332227/" target="_blank" rel="noopener" class="social-link-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://www.instagram.com/devcb1313/" target="_blank" rel="noopener" class="social-link-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="footer-copy">
+                &copy; 2026 <strong>Dev Narayan C. B.</strong> &bull; Built with precision, TypeScript, and modern CSS
+            </span>
+            <a href="#hero" class="back-to-top">
+                Back to Top &uarr;
+            </a>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         INTERACTIVE DEVELOPER TERMINAL MODAL (CLI)
+         ================================================================= -->
+    <div class="terminal-modal-overlay" id="terminal-overlay">
+        <div class="terminal-window">
+            <div class="terminal-bar">
+                <div class="terminal-dots">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-title">devcb@workstation:~ (Interactive AI Shell)</span>
+                <button class="terminal-close-btn" id="terminal-close-btn" aria-label="Close terminal">&times;</button>
+            </div>
+            <div class="terminal-body" id="terminal-scroll-area">
+                <div class="terminal-welcome">
+                    <span>Dev Narayan C. B. [Interactive Workstation v3.8]</span><br>
+                    Type <strong>help</strong> for available commands. Press <strong>ESC</strong> or <strong>~</strong> to close.
+                </div>
+                <div class="terminal-output" id="terminal-output"></div>
+                <div class="terminal-input-row">
+                    <span class="terminal-prompt">devcb@workstation:~$</span>
+                    <input type="text" id="terminal-input" class="terminal-input" autofocus autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>C B Dev Narayan</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>Machine learning Engineer and Researcher</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
-      </div>
+
+    <!-- =================================================================
+         BLOG / CASE STUDY SLIDE-OVER DRAWER MODAL
+         ================================================================= -->
+    <div class="drawer-overlay" id="drawer-overlay">
+        <div class="drawer-panel">
+            <div class="drawer-header">
+                <span class="drawer-category" id="drawer-category">Case Study</span>
+                <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Case Study">&times;</button>
+            </div>
+            <div class="drawer-body">
+                <h2 class="drawer-title" id="drawer-title">Project Title</h2>
+                <p class="drawer-subtitle" id="drawer-subtitle">Project Subtitle</p>
+
+                <div class="drawer-actions-bar">
+                    <a href="#" id="drawer-demo-link" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.88rem; padding: 0.5rem 1.15rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        Live Demo / Video
+                    </a>
+                    <a href="#" id="drawer-code-link" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.88rem; padding: 0.5rem 1.15rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        Source Code
+                    </a>
+                    <a href="#" id="drawer-page-link" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.5rem 1.15rem;">
+                        Full Page Deep Dive &rarr;
+                    </a>
+                </div>
+
+                <div class="drawer-content-html" id="drawer-content-html">
+                    <!-- Dynamic Content Injected Here -->
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main role="main">
-
-<!-- ***** Experience ***** -->
-<section class="experience" id="experience">
-  <div class="row">
-    <h2>Experience</h2>
-    <div class="experience__items">
-
-      <div class="experience__item">
-        <img src="./images/ntnu_logo.jpg" alt="NTNU logo" class="experience__logo" />
-        <div class="experience__details">
-          <h3>Exchange Student</h3>
-          <p><strong>Norwegian University of Science and Technology (NTNU)</strong></p>
-          <p>Aug 2025 - Present · Gjøvik, Innlandet, Norway · On-site</p>
-          <p>Full-time exchange student working on-site.</p>
-        </div>
-      </div>
-
-      <div class="experience__item">
-        <img src="./images/lejit_ai_logo.jpg" alt="Lejit AI logo" class="experience__logo" />
-        <div class="experience__details">
-          <h3>Software Developer</h3>
-          <p><strong>Lejit AI</strong></p>
-          <p>Sep 2024 - Aug 2025 · Remote · Part-time</p>
-          <p>Part-time software developer working remotely.</p>
-        </div>
-      </div>
-
-      <div class="experience__item">
-        <img src="./images/onfocus_software_logo.jpg" alt="OnFocus Soft logo" class="experience__logo" />
-        <div class="experience__details">
-          <h3>Intern</h3>
-          <p><strong>OnFocus Soft</strong></p>
-          <p>Dec 2023 - Aug 2024 · Remote (Hyderabad, Telangana, India) · Part-time</p>
-          <p>Worked on image processing and OCR related applications using Python and PyTorch.</p>
-        </div>
-      </div>
-
-      <div class="experience__item">
-        <img src="./images/kpit_logo.jpg" alt="KPIT logo" class="experience__logo" />
-        <div class="experience__details">
-          <h3>Intern</h3>
-          <p><strong>KPIT</strong></p>
-          <p>Jun 2023 - Jul 2023 · 2 months</p>
-          <p>Worked with various programming languages including Python.</p>
-        </div>
-      </div>
-
-      <div class="experience__item">
-        <img src="./images/ntnu_logo.jpg" alt="NTNU logo" class="experience__logo" />
-        <div class="experience__details">
-          <h3>Exchange Student (Internship)</h3>
-          <p><strong>Norwegian University of Science and Technology (NTNU)</strong></p>
-          <p>Aug 2022 - Nov 2022 · Gjøvik, Innlandet, Norway</p>
-          <p>Worked on deep learning research projects using Python and related skills.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Animal Tracking with SSL</h3>
-              <p>
-                An ml application for tracking of animals in a pig farm using computer vision. The reserach paper related was recently 
-                accepted in <href = "https://ifipaiai.org/2023/" title = "AIAI 2023",class = link__text">AIAI 2023</href> 
-                in oral presentation format.
-
-                This work was done is collaboration with NTNU Norway
-              </p>
-              <ul class="work__list">
-                <li>Barlow Twins</li>
-                <li>Efficient-Det</li>
-                <li>Deepsort Tracking</li>
-                <li>Pytorch</li>
-                <li>Lightning</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-34111-3_47" target="_blank" class="link__text">
-                  Paper <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/DeVcB13d/Tracking-framework-with-SSL" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/MOT1.gif" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Object detection with self - supervised learning</h3>
-              <p>
-                Improving object detection for farm animals by usage of self supervised learning using unannotated data.
-
-                The reserach paper related was recently accepted in <href = "https://vua-bmvc.github.io/ title = "VUA-BMVC 2023",class = link__text">VUA-BMVC 2023</href> 
-                in oral presentation format.
-
-              </p>
-              <ul class="work__list">
-                <li>Barlow twins</li>
-                <li>Efficient-Det</li>
-                <li>Pytorch</li>
-                <li>Lightning</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/FayazRahman/barlow-effdet" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/detections4.png" class="work__image" alt="Project 2" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Legal GPT</h3>
-              <p>
-               LegalGPT is an innovative solution designed to streamline legal document processing through AI technologies, including LLM RAG and IBM WatsonX. By automating legal research, document compilation, and providing accessible legal advice, LegalGPT aims to transform the legal field.
-
-                This work was done with the support of IBM
-              </p>
-              <ul class="work__list">
-                <li>RAG</li>
-                <li>WatsonX</li>
-                <li>Milvus</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://cusat-team.onrender.com/" target="_blank" class="link__text">
-                  Website <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/DeVcB13d/" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/legalgpt.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-          
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Ebuy - Flea Market website</h3>
-              <p>
-                Web application for exchanging used goods
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://ebuy-fleamarket-website-clmozov8q-devcb13d.vercel.app/" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/DeVcB13d/ebuy_fleamarket_website">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/site.gif" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Tutorji.com - Website for online medical tutions</h3>
-              <p>
-                A website for online medical tutions, hosted using godaddy and github pages
-              </p>
-              <ul class="work__list">
-                <li>html</li>
-                <li>css</li>
-                <li>javascript</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://www.tutoroji.com" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/DeVcB13d/tutoroji.github.io">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/tutoroji.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Empty - bin</h3>
-              <p>
-                Application to reduce food wastage by predicting the quantity of food to be produced using neural networks.
-              </p>
-              <ul class="work__list">
-                <li>Pytorch</li>
-                <li>Tkinter</li>
-                <li>Lightning</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/DeVcB13d/Food_Quantity_Prediction" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/DeVcB13d/Food_Quantity_Prediction">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/food2.jpg" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** Experience ***** -->
-
-
-
-
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              I am an Integrated MSc (CS) student at Cochin University of Science And Technology in India looking
-              forward to working on research projects related to artificial intelligence and machine learning. Actively
-              working to learn more about deep learning and computer vision, and also to contribute to research work
-              in those fields
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="https://docs.google.com/document/d/1dGGzm6cjuML7DiblYsy8TsGPvW9DtsE0/edit?usp=sharing&ouid=113384488173828243984&rtpof=true&sd=true" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images//devcb.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          If you need my help, feel free to contact me at
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:devcb1313@gmail.com" class="btn">devcb1313@gmail.com</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/DeVcB13d/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/c-b-dev-narayan-79b332227/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.instagram.com/devcb1313/">
-            <img src="./images/instagram.svg" title="Link to instagram" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Tracking with Self-Supervised Learning | Dev Narayan C. B.</title>
+    <meta name="description" content="Research project at NTNU Norway: Self-supervised Multiple Object Tracking pipeline using Barlow Twins pre-training and EfficientDet, published at AIAI 2023 and BMVC 2023.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="./images/Dlogo.png">
+</head>
+<body class="project-page">
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>DEV<span class="logo-accent">.CV</span><span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects" class="nav-link">&larr; Back to Projects</a></li>
+                <li><a href="index.html#publications" class="nav-link">Publications</a></li>
+                <li><a href="index.html#contact" class="nav-btn">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="project-detail-container">
+        <header class="project-hero">
+            <div class="project-hero-badge">
+                <span class="pulse-dot"></span> NTNU Norway Research &bull; Published at AIAI &amp; BMVC 2023
+            </div>
+            <h1 class="project-hero-title">Tracking-by-Self Detection: SSL Animal Tracking</h1>
+            <p class="project-hero-subtitle">
+                A self-supervised object detection and multiple object tracking (MOT) pipeline designed for farm livestock and constrained ecological environments, achieving mAP gains on consumer GPUs without expensive manual annotation.
+            </p>
+            <div class="project-hero-actions">
+                <a href="https://doi.org/10.1007/978-3-031-34111-3_47" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Springer Nature Paper
+                </a>
+                <a href="https://github.com/FayazRahman/barlow-effdet" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    Source Code on GitHub
+                </a>
+            </div>
+            <div class="project-tags-bar">
+                <span class="tech-tag">Self-Supervised Learning</span>
+                <span class="tech-tag">Barlow Twins</span>
+                <span class="tech-tag">EfficientDet</span>
+                <span class="tech-tag">DeepSORT</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Pseudo-Labelling</span>
+            </div>
+        </header>
+
+        <article class="project-body-content">
+            <section class="content-block">
+                <div class="media-preview-card">
+                    <img src="./images/MOT1.gif" alt="Real-time Animal Tracking Tracking Demo" class="preview-media-img">
+                    <div class="media-caption">
+                        <span>Multi-target tracking showing stable identity bounding boxes across occluding pigs in real-time camera streams.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Context -->
+            <section class="content-block">
+                <h2 class="content-heading">Research Motivation &amp; Challenge</h2>
+                <p>
+                    Animal detection and phenotyping are critical for animal welfare and behavioural science. However, manual frame-by-frame polygon annotation is extraordinarily labor-intensive. Most existing systems suffer when deployed to new farms or lighting conditions due to data scarcity.
+                </p>
+                <p>
+                    To resolve this bottleneck, we engineered a self-supervised representation pipeline that pre-trains on massive volumes of unlabelled farm video. By modifying <strong>Barlow Twins</strong> cross-correlation objective and integrating an <strong>EfficientDet</strong> backbone, the detector achieves notable mAP gains across all confidence thresholds without inflating parameter counts or computational overhead.
+                </p>
+            </section>
+
+            <!-- Technical Innovations -->
+            <section class="content-block">
+                <h2 class="content-heading">Methodological Highlights</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Barlow Twins SSL Pre-Training</h3>
+                        <p>Applies redundancy reduction across augmented image views, driving the cross-correlation matrix toward identity. Removes the need for negative pairs or memory banks, yielding resilient visual features.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏷️</div>
+                        <h3>Automated Pseudo-Labelling</h3>
+                        <p>Constructed an automated temporal pseudo-labelling engine to extrapolate confident detections into continuous track trajectories across hours of unlabelled farm footage.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Consumer-GPU Real-Time Inference</h3>
+                        <p>Engineered the pipeline to achieve high FPS on non-industrial grade GPUs (e.g., standard consumer RTX cards), making on-farm online edge deployment viable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications -->
+            <section class="content-block">
+                <h2 class="content-heading">Peer-Reviewed Publications</h2>
+                <div class="pub-card-detailed">
+                    <span class="pub-tag">AIAI 2023 Conference</span>
+                    <h3>Tracking-by-Self Detection: A Self-supervised Framework for Multiple Animal Tracking</h3>
+                    <p class="pub-authors">Fayaz Rahman, C. B. Dev Narayan, et al. &bull; IFIP Advances in Information and Communication Technology, vol 675. Springer, Cham.</p>
+                    <a href="https://doi.org/10.1007/978-3-031-34111-3_47" target="_blank" rel="noopener" class="link-btn">
+                        View DOI: 10.1007/978-3-031-34111-3_47 &rarr;
+                    </a>
+                </div>
+
+                <div class="pub-card-detailed" style="margin-top: 1.5rem;">
+                    <span class="pub-tag">BMVC 2023 Workshop</span>
+                    <h3>Self-supervised Animal Detection in Constrained Environment</h3>
+                    <p class="pub-authors">1st Workshop in Video Understanding and its Applications (VUA) @ British Machine Vision Conference 2023.</p>
+                    <a href="https://bmvc2023.org/workshops/The1stWorkshopinVideoUnderstandinganditsApplications/1/CameraReady/BMVC2023_Workshop.pdf" target="_blank" rel="noopener" class="link-btn">
+                        Read Workshop Paper PDF &rarr;
+                    </a>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <section class="project-footer-nav">
+                <a href="carevoice-ai.html" class="nav-card next-card">
+                    <span class="nav-label">&larr; Back to Voice Agents</span>
+                    <span class="nav-title">CareVoice AI &mdash; Real-Time Voice Agent</span>
+                </a>
+                <a href="index.html#projects" class="nav-card next-card">
+                    <span class="nav-label">Return &rarr;</span>
+                    <span class="nav-title">Explore All Projects</span>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dev Narayan C. B. &bull; Designed &amp; Engineered with Precision</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

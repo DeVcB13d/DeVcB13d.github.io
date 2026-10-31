@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd Analytics &amp; Zone Flow Engine | Dev Narayan C. B.</title>
+    <meta name="description" content="A high-performance, multi-threaded pipeline for real-time person detection, ByteTrack persistent ID tracking, and zone-based behavioral analytics with a Gradio web console.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="./images/Dlogo.png">
+</head>
+<body class="project-page">
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>DEV<span class="logo-accent">.CV</span><span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects" class="nav-link">&larr; Back to Projects</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#contact" class="nav-btn">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="project-detail-container">
+        <header class="project-hero">
+            <div class="project-hero-badge">
+                <span class="pulse-dot"></span> Computer Vision &amp; Spatial Intelligence
+            </div>
+            <h1 class="project-hero-title">Crowd Analytics &amp; Zone Flow Engine</h1>
+            <p class="project-hero-subtitle">
+                A high-performance, multi-threaded computer vision pipeline for real-time person detection, persistent ID tracking, zone-based spatial occupancy, and directional crowd flow analysis.
+            </p>
+            <div class="project-hero-actions">
+                <a href="https://github.com/DeVcB13d/crowd_analytics" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    View on GitHub
+                </a>
+                <a href="https://github.com/DeVcB13d/crowd_analytics/blob/main/outputs/final_annotated.mp4" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Watch Annotated Video Demo
+                </a>
+            </div>
+            <div class="project-tags-bar">
+                <span class="tech-tag">YOLOv8</span>
+                <span class="tech-tag">ByteTrack</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Multi-Threading</span>
+                <span class="tech-tag">Polygon Spatial Geometry</span>
+                <span class="tech-tag">Gradio Console</span>
+                <span class="tech-tag">Real-Time Telemetry</span>
+            </div>
+        </header>
+
+        <article class="project-body-content">
+            <!-- Overview & Visual Showcase -->
+            <section class="content-block">
+                <h2 class="content-heading">System Overview</h2>
+                <p>
+                    Modern surveillance and crowd safety systems require instantaneous situational awareness without dropping frames. This project introduces an end-to-end multi-threaded analytics pipeline that consumes video feeds, performs hardware-accelerated YOLOv8 object detection, maps persistent object trajectories via ByteTrack, and evaluates custom user-defined geometric polygon zones in real time.
+                </p>
+
+                <div class="media-preview-card">
+                    <img src="./images/detections4.png" alt="Crowd Analytics Zone Detection" class="preview-media-img">
+                    <div class="media-caption">
+                        <span>Real-time polygon zone overlay with persistent ByteTrack IDs and trajectory tracking.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="content-block">
+                <h2 class="content-heading">Key Innovations &amp; Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Real-Time Detection &amp; Tracking</h3>
+                        <p>Leverages optimized YOLOv8 for per-frame bounding box extraction paired with ByteTrack's association matching for persistent track IDs even through heavy occlusion and intersecting crowd trajectories.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📐</div>
+                        <h3>Zone-Based Spatial Analytics</h3>
+                        <p>Allows operators to define arbitrary polygon regions of interest (entrances, emergency corridors, transit platforms). Point-in-polygon algorithms compute live dwell time and crowd density per zone.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧭</div>
+                        <h3>Directional Flow Estimation</h3>
+                        <p>Computes temporal displacement vectors for every tracked individual within each polygon to determine dominant group heading (North, South, East, West) and spot counter-flow bottlenecks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚨</div>
+                        <h3>Automated Alerting &amp; Auditing</h3>
+                        <p>Emits structured JSON events and logs warnings to <code>logs/run.log</code> whenever zone occupancy or dwell durations breach configurable thresholds, enabling rapid emergency dispatch.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖥️</div>
+                        <h3>Modern Gradio Web Console</h3>
+                        <p>Interactive dashboard providing live stream visualization, interactive polygon zone drafting, metric charts, threshold adjustments, and video export controls.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Multi-Threaded Decoupling</h3>
+                        <p>Dedicated threads for video decoding, GPU inference, tracking computation, and UI rendering connected through thread-safe queues ensure zero frame drops.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Pipeline -->
+            <section class="content-block">
+                <h2 class="content-heading">Pipeline Architecture</h2>
+                <div class="diagram-box">
+                    <div class="diagram-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="diagram-title">Data Processing Flow</span>
+                    </div>
+                    <pre class="ascii-diagram"><code>┌────────────────┐     Decoded Frame     ┌────────────────────────┐
+│  RTSP / Video  │ ────────────────────► │  YOLOv8 Inference      │
+│  Input Stream  │                       │  (GPU Batch Tensor)    │
+└────────────────┘                       └───────────┬────────────┘
+                                                     │ Detections
+                                                     ▼
+┌────────────────┐     Spatial Trajectory┌────────────────────────┐
+│ Zone Polygon   │ ◄──────────────────── │  ByteTrack Associator  │
+│ Point-in-Poly  │                       │  (Persistent Kalman ID)│
+└───────┬────────┘                       └────────────────────────┘
+        │
+        ├─────────────────────────────┬───────────────────────────┐
+        ▼                             ▼                           ▼
+┌────────────────┐           ┌────────────────┐          ┌────────────────┐
+│  Density &amp; Flow│           │ Automated Alert│          │ Gradio Console │
+│  Vector Engine │           │ JSON Log Queue │          │ Dashboard UI   │
+└────────────────┘           └────────────────┘          └────────────────┘</code></pre>
+                </div>
+            </section>
+
+            <!-- Video Demonstrations -->
+            <section class="content-block">
+                <h2 class="content-heading">Demonstration Assets</h2>
+                <div class="demo-links-card">
+                    <p>Direct video files are accessible directly on the repository:</p>
+                    <ul class="clean-bullet-list">
+                        <li>
+                            <a href="https://github.com/DeVcB13d/crowd_analytics/blob/main/samples/sample_video.mp4" target="_blank" rel="noopener">
+                                <strong>sample_video.mp4</strong> &mdash; Raw source video of dense pedestrian footfall.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/DeVcB13d/crowd_analytics/blob/main/outputs/final_annotated.mp4" target="_blank" rel="noopener">
+                                <strong>final_annotated.mp4</strong> &mdash; Production output with real-time zone polygons, bounding boxes, vector lines, and live counters.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <section class="project-footer-nav">
+                <a href="el-design-house.html" class="nav-card next-card">
+                    <span class="nav-label">Next Project &rarr;</span>
+                    <span class="nav-title">The El Design House &mdash; Luxury Architectural Studio</span>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dev Narayan C. B. &bull; Designed &amp; Engineered with Precision</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

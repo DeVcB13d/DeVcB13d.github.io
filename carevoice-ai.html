@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareVoice AI — Real-time Voice Agent & Video Avatar | Dev Narayan C. B.</title>
+    <meta name="description" content="A real-time voice-first clinical intake and appointment booking agent featuring LiveKit, Deepgram STT, OpenAI GPT-4o, Cartesia TTS, and Tavus photorealistic video avatar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="./images/Dlogo.png">
+</head>
+<body class="project-page">
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>DEV<span class="logo-accent">.CV</span><span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects" class="nav-link">&larr; Back to Projects</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#contact" class="nav-btn">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="project-detail-container">
+        <!-- Hero Section -->
+        <header class="project-hero">
+            <div class="project-hero-badge">
+                <span class="pulse-dot"></span> Full-Stack Agentic AI &amp; WebRTC
+            </div>
+            <h1 class="project-hero-title">CareVoice AI</h1>
+            <p class="project-hero-subtitle">
+                A production-grade, voice-first clinical agent combining ultra-low-latency speech AI, real-time WebRTC audio-video streaming, a Tavus photorealistic doctor avatar, and autonomous calendar booking.
+            </p>
+            <div class="project-hero-actions">
+                <a href="https://vercel.com/devcb13ds-projects/carevoice-ai" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Live Demo on Vercel
+                </a>
+                <a href="https://github.com/DeVcB13d/carevoice-ai" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    Source Code on GitHub
+                </a>
+            </div>
+            <div class="project-tags-bar">
+                <span class="tech-tag">LiveKit WebRTC</span>
+                <span class="tech-tag">Deepgram STT</span>
+                <span class="tech-tag">Cartesia TTS</span>
+                <span class="tech-tag">OpenAI GPT-4o</span>
+                <span class="tech-tag">Tavus Avatar</span>
+                <span class="tech-tag">React + Vite + TS</span>
+                <span class="tech-tag">Python aiohttp</span>
+                <span class="tech-tag">SQLite</span>
+            </div>
+        </header>
+
+        <!-- Main Content Article -->
+        <article class="project-body-content">
+            <!-- Key Highlights Grid -->
+            <section class="content-block">
+                <h2 class="content-heading">Core Capabilities &amp; Features</h2>
+                <div class="features-table-wrapper">
+                    <table class="features-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Implementation &amp; Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="feature-name">🎙️ Voice-First Interface</span></td>
+                                <td>Real-time speech-to-text with <strong>Deepgram Nova-2</strong> + ultra-expressive streaming text-to-speech with <strong>Cartesia Sonic</strong> over WebRTC via <strong>LiveKit Cloud</strong>. End-to-end latency kept under 650ms.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="feature-name">🤖 AI Video Avatar</span></td>
+                                <td><strong>Tavus-powered</strong> photorealistic doctor avatar responds directly in video with synchronized lip motion, expressions, and human-like conversational presence.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="feature-name">📅 Calendar Booking</span></td>
+                                <td>Interactive visual calendar UI enabling patients to inspect available specialist slots, select appointment times, and confirm reservations hands-free or via click.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="feature-name">🔁 Session Memory</span></td>
+                                <td>Identifies callers by phone number. Returning users immediately receive personalized greetings, access their medical history, and continue uninterrupted care.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="feature-name">📝 Auto Call Summary</span></td>
+                                <td>Structured clinical summary generated dynamically after each session, logging symptoms, booked slots, patient preferences, and clinical timestamps.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="feature-name">🛠️ Live Tool Feedback</span></td>
+                                <td>Visual on-screen pulse indicators display agent tool states in real time: <em>"Fetching available slots…"</em>, <em>"Verifying schedule…"</em>, <em>"Booking confirmed ✅"</em>.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="feature-name">💬 Dual Transcript</span></td>
+                                <td>Color-coded, real-time synchronized chat bubbles (caller on right in electric blue, agent on left in sleek charcoal glass) with auto-scroll.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Architecture Section -->
+            <section class="content-block">
+                <h2 class="content-heading">System Architecture &amp; Data Pipeline</h2>
+                <p>
+                    CareVoice AI coordinates a distributed real-time pipeline between a modern TypeScript frontend, a Python async token service, LiveKit's global WebRTC mesh, an autonomous Python Agent Worker, and a local persistence store.
+                </p>
+
+                <div class="diagram-box">
+                    <div class="diagram-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="diagram-title">System Architecture Flow</span>
+                    </div>
+                    <pre class="ascii-diagram"><code>┌──────────────────────┐         HTTPS          ┌─────────────────────────┐
+│   React Frontend     │ ──────────────────────► │  Python Token Server    │
+│   (Vite + TS)        │                         │  (aiohttp :8080)        │
+└──────────────────────┘                         └──────────┬──────────────┘
+         │                                                   │
+         │  WebRTC (LiveKit SDK)                    LiveKit Cloud
+         │                                                   │
+         └─────────────────────────────────────────────────► │
+                                                   ┌──────────▼──────────────┐
+                                                   │  Python Agent Worker    │
+                                                   │  (LiveKit Agents 1.x)   │
+                                                   │                         │
+                                                   │  STT: Deepgram          │
+                                                   │  LLM: OpenAI GPT-4o     │
+                                                   │  TTS: Cartesia          │
+                                                   │  Avatar: Tavus          │
+                                                   └──────────┬──────────────┘
+                                                              │ SQLite
+                                                   ┌──────────▼──────────────┐
+                                                   │  voice_agent.db         │
+                                                   │  users · appointments   │
+                                                   │  time_slots · summaries │
+                                                   └─────────────────────────┘</code></pre>
+                </div>
+
+                <div class="arch-breakdown-grid">
+                    <div class="arch-card">
+                        <h3>1. Frontend Client (Vite + React + TS)</h3>
+                        <p>Provides zero-latency WebRTC media negotiation via the LiveKit Client SDK. Renders an adaptive UI with live audio visualizer waveforms, calendar slot picker, and interactive transcript.</p>
+                    </div>
+                    <div class="arch-card">
+                        <h3>2. Authentication &amp; Token Server</h3>
+                        <p>An asynchronous Python microservice built on <code>aiohttp</code> generating cryptographically signed JWT tokens with granular room permissions and ephemeral identity management.</p>
+                    </div>
+                    <div class="arch-card">
+                        <h3>3. Autonomous Agent Worker</h3>
+                        <p>Built with LiveKit Agents 1.x, managing bidirectional audio streaming pipes. Performs Voice Activity Detection (VAD), calls tool functions for calendar manipulation, and orchestrates Tavus avatar video frames.</p>
+                    </div>
+                    <div class="arch-card">
+                        <h3>4. Relational State Store</h3>
+                        <p>A SQLite persistent store preserving callers, structured appointment records, provider schedules, and GPT-synthesized consultation notes with audit timestamps.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Challenges & Solutions -->
+            <section class="content-block">
+                <h2 class="content-heading">Engineering Highlights &amp; Low Latency Optimizations</h2>
+                <div class="highlights-list">
+                    <div class="highlight-item">
+                        <h4>Sub-Second Voice Turnaround</h4>
+                        <p>Traditional voice agents suffer 2–3 second conversational lag. By streaming audio directly through Deepgram's websocket STT into GPT-4o's token streaming pipeline, chunked directly into Cartesia's neural audio engine, conversational interruption and turn-taking feel instantaneous.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Deterministic Function Calling</h4>
+                        <p>Engineered rigorous JSON function schemas for doctor schedule checking, patient identity verification, and appointment booking, preventing hallucinations while keeping responses empathetic and medical-compliant.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Audio-Visual Sync with Tavus</h4>
+                        <p>Synchronized streaming audio tracks with Tavus photorealistic avatar video tracks over WebRTC channels without desync or stutter under fluctuating network conditions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Navigation -->
+            <section class="project-footer-nav">
+                <a href="crowd-analytics.html" class="nav-card next-card">
+                    <span class="nav-label">Next Case Study &rarr;</span>
+                    <span class="nav-title">Crowd Analytics &amp; Zone Flow Engine</span>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dev Narayan C. B. &bull; Designed &amp; Engineered with Precision</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
